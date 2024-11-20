@@ -20,6 +20,7 @@ export class Auth {
       'client_id': this.clientId,
       'client_secret': this.clientSecret,
       'audience': 'dev-api',
+      'scope': 'data-access:all',
       'grant_type': 'client_credentials'
     }
 
@@ -29,7 +30,7 @@ export class Auth {
 
     return this.http.authRequest(
       'POST',
-      '/oauth/token',
+      '/oauth2/token',
       body,
       headers
     ).then((response: any) => {
