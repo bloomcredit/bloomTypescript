@@ -7,7 +7,7 @@ describe('Bloomr Api test', () => {
     it('should return auth token', async () => {
       const api = new BloomrApi(
         'https://sandbox.bloom.dev',
-        'https://auth.bloom.dev',
+        'https://authn.bloom.dev',
         'aYQCelzANDoHsjj6ByqTqyPl05T9c8FR',
         'KZGA0g8-aWQUVvD91WB_iV29q8xK4Ytm9f_5YGfnkyEgEuZ5-M8I_qIs9LJI0sji'
       );
