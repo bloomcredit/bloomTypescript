@@ -1,5 +1,5 @@
 {
-  "name": "bloomr-ts",
+  "name": "@bloomcredit/bloomr-ts",
   "version": "1.0.0",
   "description": "",
   "main": "dist/index.js",
