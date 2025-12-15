@@ -9,7 +9,7 @@
 ```
 const api = new BloomrApi(
     'https://sandbox.bloom.dev',
-    'https://authn.bloom.dev',
+    'https://authn.bloomcredit.dev',
     'CLIENT_ID',
     'CLIENT_SECRET'
 );
