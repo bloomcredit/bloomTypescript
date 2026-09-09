@@ -4,12 +4,19 @@ import { BloomrApi } from '../src';
 
 describe('Bloomr Api test', () => {
 
-    it('should return auth token', async () => {
+    it('should return auth token', async function () {
+      const clientId = process.env.BLOOM_CLIENT_ID;
+      const clientSecret = process.env.BLOOM_CLIENT_SECRET;
+
+      if (!clientId || !clientSecret) {
+        this.skip();
+      }
+
       const api = new BloomrApi(
-        'https://sandbox.bloom.dev',
-        'https://authn.bloomcredit.dev',
-        'aYQCelzANDoHsjj6ByqTqyPl05T9c8FR',
-        'KZGA0g8-aWQUVvD91WB_iV29q8xK4Ytm9f_5YGfnkyEgEuZ5-M8I_qIs9LJI0sji'
+        process.env.BLOOM_API_URL || 'https://sandbox.bloom.dev',
+        process.env.BLOOM_AUTH_URL || 'https://authn.bloomcredit.dev',
+        clientId,
+        clientSecret
       );
 
       try {
